@@ -1,9 +1,5 @@
 # State Benchmark (3×3, full run) — concise summary
 
-Source log: `logs/state_benchmark_28764189.out` (Job `28764189`, full mode)
-
-## 1) Objectives and model families
-
 The benchmark trains 3 objective settings (model keys `A/B/C`) and evaluates each under 3 input modalities (`text_only`, `voice_only`, `voice_text`), for **9 total trained conditions**.
 
 ### Three model types:
