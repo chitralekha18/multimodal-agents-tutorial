@@ -14,7 +14,6 @@ This repository contains a complete tutorial for training and evaluating multimo
    - **What it is:** The main interactive Jupyter notebook tutorial
    - **What you'll learn:** 
      - How to build a multimodal model with text and audio input
-     - Different objective settings (uncertainty-only, multitask, correctness-only)
      - Single model architecture (UncertaintyModel) using Qwen with LoRA adapters and audio projectors
      - Training and evaluation procedures
      - How to interpret model outputs
