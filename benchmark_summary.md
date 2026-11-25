@@ -6,9 +6,19 @@ Source log: `logs/state_benchmark_28764189.out` (Job `28764189`, full mode)
 
 The benchmark trains 3 objective settings (model keys `A/B/C`) and evaluates each under 3 input modalities (`text_only`, `voice_only`, `voice_text`), for **9 total trained conditions**.
 
-- **A: `uncertainty_only`** — predicts learner uncertainty only.
-- **B: `multitask_equal_weight`** — jointly predicts uncertainty + correctness, with equal loss weight.
-- **C: `correctness_only`** — predicts correctness only.
+### Three model types:
+
+- **A: Uncertainty Model (`uncertainty_only`)** — LLM with single Uncertainty Head; predicts learner uncertainty only.
+
+![Uncertainty Model Architecture](figures/model_uncertainty.png)
+
+- **B: Combined Model (`multitask_equal_weight`)** — LLM with dual heads (Uncertainty Head + Correctness Head); jointly predicts uncertainty + correctness with equal loss weight.
+
+![Combined Model Architecture](figures/model_combined.png)
+
+- **C: Correctness Model (`correctness_only`)** — LLM with single Correctness Head; predicts correctness only.
+
+![Correctness Model Architecture](figures/model_correctness.png)
 
 Model backbone details (shared across runs):
 - Qwen with LoRA adapters (base weights frozen).
